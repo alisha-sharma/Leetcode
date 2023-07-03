@@ -1,6 +1,6 @@
 package basics;
 
-public class computePower {
+public class ComputePower {
     public static void main(String[] args) {
         int a = 3, b = 2;
         int result = 1;

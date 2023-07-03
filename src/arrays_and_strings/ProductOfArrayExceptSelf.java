@@ -1,8 +1,8 @@
-package arrays;
+package arrays_and_strings;
 
 import java.util.Arrays;
 
-public class productOfArrayExceptSelf {
+public class ProductOfArrayExceptSelf {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(productExceptSelf(new int[] {1, 2, 3, 4} )));
         System.out.println(Arrays.toString(productExceptSelfOptimized(new int[]{1, 2, 3, 4})));

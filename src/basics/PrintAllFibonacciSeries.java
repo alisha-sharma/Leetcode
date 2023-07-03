@@ -1,6 +1,6 @@
 package basics;
 
-public class printAllFibonacciSeries {
+public class PrintAllFibonacciSeries {
     public static void main(String[] args) {
         int num = 10;
         printSeries(num);

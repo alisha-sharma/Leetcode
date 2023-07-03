@@ -1,6 +1,6 @@
 package basics;
 
-public class printNthFibonacciSeries {
+public class PrintNthFibonacciSeries {
     public static void main(String[] args) {
         int num = 5;
         System.out.println(printNthFibonacciNumber(7));
