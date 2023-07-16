@@ -35,32 +35,34 @@ public class RightSideViewOfBinaryTree {
         return result;
     }
 
-    private void findView(TreeNode root, List<Integer> result, int level){
-        if(root == null) return;
+    private void findView(TreeNode root, List<Integer> result, int level) {
+        if (root == null) return;
 
         // we just need to add only one node in each level
-        if(result.size() == level) result.add(root.val);
+        if (result.size() == level) result.add(root.val);
 
         findView(root.right, result, level + 1);
         findView(root.left, result, level + 1);
 
     }
 
+    /* Time Complexity O(N), where N is total number of nodes traversed in level order
+        Space Complexity O(W), where W is the max width  of the tree*/
     public static List<Integer> rightSideViewUsingQueue(TreeNode root) {
-        if(root == null) return new ArrayList<>();
+        if (root == null) return new ArrayList<>();
 
         List<Integer> list = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList<>();
 
         queue.add(root);
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             int size = queue.size();
-            for(int i = 0; i < size; i++){
+            for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                if(node != null){
-                    if(i == 0) list.add(node.val);
-                    if(node.right != null) queue.add(node.right);
-                    if(node.left != null) queue.add(node.left);
+                if (node != null) {
+                    if (i == 0) list.add(node.val);
+                    if (node.right != null) queue.add(node.right);
+                    if (node.left != null) queue.add(node.left);
                 }
             }
 

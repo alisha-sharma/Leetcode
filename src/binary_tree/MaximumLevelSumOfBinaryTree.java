@@ -15,6 +15,8 @@ public class MaximumLevelSumOfBinaryTree {
         System.out.println("Result: " + maxLevelSumUsingDFS(root));
     }
 
+    /* Time Complexity O(N), where N is total number of nodes
+         Space Complexity O(H), where H is the max height of the tree*/
     private static int maxLevelSumUsingDFS(TreeNode root) {
         if (root == null) return 0;
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -40,6 +42,8 @@ public class MaximumLevelSumOfBinaryTree {
         maxLevelSumHelper(root.right, level, map);
     }
 
+    /* Time Complexity O(N), where N is total number of nodes
+        Space Complexity O(W), where W is the max width  of the tree*/
     public static int maxLevelSumUsingBFS(TreeNode root) {
         if (root == null) return 0;
 
